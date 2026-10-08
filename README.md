@@ -10,42 +10,29 @@ against MCNP, OpenMC, Geant4 or experiments. Do that before you trust any number
 
 ## Quick start
 
-Linux / macOS:
+### Linux / macOS
 
 ```bash
-make              # builds build/1dmc-n, with OpenMP if available
-make check        # regression and data checks, roughly 2 minutes
+make
+make check
 pip install -r requirements.txt
 python3 gui/1dmc-n_gui.py
 ```
 
 ### Windows (g++)
 
-Run this in PowerShell from the project folder. It installs MSYS2 (which provides g++) and
+Run this in PowerShell from the project folder. It installs WINLIB (which provides g++) and
 Python with winget, then builds `build\1dmc-n.exe`.
 
 ```powershell
-winget install -e --id MSYS2.MSYS2
-winget install -e --id Python.Python.3.12
-
-# g++ with OpenMP, installed through MSYS2's package manager
-C:\msys64\usr\bin\bash.exe -lc "pacman -S --noconfirm mingw-w64-ucrt-x86_64-gcc"
-$env:Path = "C:\msys64\ucrt64\bin;" + $env:Path    # add it to your permanent PATH to keep it
-
-# build (the GUI and tests look for build\1dmc-n.exe)
+winget install -e --id BrechtSanders.WinLibs.POSIX.UCRT --accept-source-agreements
+winget install -e --id Python.Python.3.12 --accept-source-agreements
+$env:Path += ";" + (Get-ChildItem -Path "$env:LOCALAPPDATA\**\mingw64\bin" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName)
 New-Item -ItemType Directory -Force build | Out-Null
-g++ -O3 -std=c++17 -fopenmp src\1dmc-n.cpp -o build\1dmc-n.exe
-
-# GUI and checks
+g++ -O3 -std=c++17 -fopenmp -D_USE_MATH_DEFINES src\1dmc-n.cpp -o build\1dmc-n.exe
 pip install -r requirements.txt
 python gui\1dmc-n_gui.py
-python tests\check.py
 ```
-
-Open a new terminal after installing Python so `python` and `pip` are on the PATH. If you
-don't have winget, install [MSYS2](https://www.msys2.org) and
-[Python](https://www.python.org) by hand and continue from the `pacman` line. The `make`
-targets aren't needed on Windows.
 
 ### Examples
 

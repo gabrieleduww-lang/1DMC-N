@@ -1,0 +1,8 @@
+# EGAF thermal-capture cascade for Li7(n,g)Li8; Sn_keV=2032.618 sigma_th_b=0.045 primary_coverage=1.0000 Egamma_over_Sn=1.016
+S,2032.6182,2
+L,0,0.0000
+L,1,980.6000
+L,2,2032.5700
+T,1,0,980.5300,0.0997937
+T,2,1,1051.9000,0.0980114
+T,2,0,2032.3000,0.901989

@@ -1,0 +1,6 @@
+isotope,reaction,prob,energies_MeV
+# Explicit photon cascades. Isotopes not listed use a generic Sn-conserving cascade (see README).
+# reaction: cap = (n,gamma); oabs = other absorption (e.g. (n,alpha)). prob = branching per event; energies separated by ';'.
+# Add measured lines here (e.g. from the IAEA prompt-gamma database) to improve capture-gamma accuracy.
+H1,cap,1.0,2.2233
+B10,oabs,0.937,0.4776

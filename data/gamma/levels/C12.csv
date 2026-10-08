@@ -1,0 +1,6 @@
+# RIPL-3 discrete levels via TALYS structure/levels/exp. L,idx,E_MeV ; B,idx,final,branch_ratio,alpha_ICC
+L,0,0.000000
+L,1,4.439820
+B,1,0,1.000000,0.001322
+L,2,7.654070
+B,2,1,1.000000,0.000876

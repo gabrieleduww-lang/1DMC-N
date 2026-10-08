@@ -1,0 +1,8 @@
+# EGAF thermal-capture cascade for Ca48(n,g)Ca49; Sn_keV=5146.453 sigma_th_b=1.09 primary_coverage=0.9669 Egamma_over_Sn=0.919
+S,5146.4529,2
+L,0,0.0000
+L,1,2023.0800
+L,2,5146.4800
+T,1,0,2023.0400,0.122706
+T,2,1,3123.2900,0.245413
+T,2,0,5146.1900,0.721514

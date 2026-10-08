@@ -1,0 +1,5 @@
+# EGAF thermal-capture cascade for H1(n,g)H2; Sn_keV=2224.566 sigma_th_b=0.3326 primary_coverage=1.0000 Egamma_over_Sn=1.000
+S,2224.5662,1
+L,0,0.0000
+L,1,2224.5660
+T,1,0,2223.2483,1

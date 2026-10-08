@@ -1,0 +1,6 @@
+numpy
+matplotlib
+# only needed to rebuild data/ with tools/build_data.py:
+# periodictable
+# xraydb
+# tkinter ships with Python on Windows/macOS; on Debian/Ubuntu: sudo apt install python3-tk

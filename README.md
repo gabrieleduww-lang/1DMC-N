@@ -126,6 +126,10 @@ secondary-gamma dose or polyethylene thermal behaviour against experiment.
 curl and `pip install numpy periodictable xraydb ncrystal`. Each builder script documents
 its own file format.
 
+## AI Disclosure & Attribution
+
+Some portions of the C++ physics engine and Tk GUI logic were created with the assistance of artificial intelligence tools. All core transport algorithms, cross-section data parsers, and physics conservation laws have been independently verified, benchmarked against analytic limits, and subjected to automated regression testing (see the `Checks` section).
+
 ## Splitting for thick shields
 
 `--split R` divides each layer into cells (default total/20, set with `--cell`) and gives
